@@ -1,0 +1,383 @@
+[
+  {
+    "id": 1,
+    "title": "Two Sum",
+    "description": "Given an array of integers and a target value, find the indices of the two numbers that add up to the target. The typical efficient approach uses a hash map to store seen values and their indices so you can check complements in O(1) and solve the problem in a single pass.",
+    "difficulty": "Easy",
+    "topics": ["Array", "HashMap"],
+    "tags": ["array", "hashmap", "beginner"],
+    "category": "Algorithms",
+    "acceptance": 45,
+    "completed": false,
+    "createdAt": "2024-01-10",
+    "publicTests": [
+      { "input": [[2, 7, 11, 15], 9], "expected": [0, 1], "name": "Example 1" },
+      { "input": [[3, 2, 4], 6], "expected": [1, 2], "name": "Example 2" },
+      { "input": [[3, 3], 6], "expected": [0, 1], "name": "Example 3" }
+    ],
+    "solutionFunction": {
+      "javascript": "twoSum",
+      "python": "two_sum",
+      "java": "twoSum",
+      "cpp": "twoSum"
+    },
+    "starterCode": {
+      "javascript": "function twoSum(nums, target) {\n  // TODO: return indices of the two numbers that add up to target\n}\n",
+      "python": "def two_sum(nums, target):\n    \"\"\"TODO: return indices of the two numbers that add up to target\"\"\"\n    pass\n",
+      "java": "public class Solution {\n    public int[] twoSum(int[] nums, int target) {\n        // TODO: return indices of the two numbers that add up to target\n        return new int[]{};\n    }\n}\n",
+      "cpp": "#include <vector>\nusing namespace std;\n\nclass Solution {\npublic:\n    vector<int> twoSum(vector<int>& nums, int target) {\n        // TODO: return indices of the two numbers that add up to target\n        return {};\n    }\n};\n"
+    }
+  },
+ {
+  "id": 2,
+  "title": "Valid Parentheses",
+  "description": "Check whether a string containing various types of parentheses is valid — parentheses must close in the correct order and match type. The common solution is to use a stack: push opening brackets and pop/compare when encountering a closing bracket.",
+  "difficulty": "Easy",
+  "topics": ["Stack", "Strings"],
+  "tags": ["stack", "parentheses", "strings"],
+  "category": "Algorithms",
+  "acceptance": 60,
+  "completed": false,
+  "createdAt": "2024-02-05",
+  "publicTests": [
+    { "input": ["()"], "expected": true, "name": "Simple pair" },
+    { "input": ["()[]{}"], "expected": true, "name": "Multiple pairs" },
+    { "input": ["(]"], "expected": false, "name": "Mismatched" }
+  ],
+  "solutionFunction": {
+    "javascript": "isValid",
+    "python": "is_valid",
+    "java": "isValid",
+    "cpp": "isValid"
+  },
+  "starterCode": {
+      "javascript": "function isValid(s) {\n  // write code here\n  return false;\n}",
+      "python": "def is_valid(s):\n    # write code here\n    return False",
+      "java": "class Solution {\n    public boolean isValid(String s) {\n        // write code here\n        return false;\n    }\n}",
+      "cpp": "#include <string>\nusing namespace std;\nclass Solution {\npublic:\n    bool isValid(string s) {\n        // write code here\n        return false;\n    }\n};"
+    }
+},
+
+
+  {
+    "id": 3,
+    "title": "Merge Two Sorted Lists",
+    "description": "Merge two sorted linked lists into a single sorted list and return the head. You can solve this by iterating through both lists simultaneously and building a new list (or rearranging pointers) to take the smaller node at each step.",
+    "difficulty": "Easy",
+    "topics": ["Linked List", "Two Pointers"],
+    "tags": ["linked list", "merge", "two pointers"],
+    "category": "Data Structures",
+    "acceptance": 72,
+    "completed": false,
+    "createdAt": "2024-02-15",
+    "publicTests": [
+      { "input": [[1, 2, 4], [1, 3, 4]], "expected": [1, 1, 2, 3, 4, 4], "name": "Merge lists" },
+      { "input": [[], []], "expected": [], "name": "Both empty" },
+      { "input": [[], [0]], "expected": [0], "name": "One empty" }
+    ],
+    "solutionFunction": {
+      "javascript": "mergeTwoLists",
+      "python": "merge_two_lists",
+      "java": "mergeTwoLists",
+      "cpp": "mergeTwoLists"
+    },
+    "starterCode": {
+      "javascript": "function mergeTwoLists(l1, l2) {\n  // l1 and l2 are sorted arrays representing linked lists\n  // TODO: return a new sorted array containing all elements\n}\n",
+      "python": "def merge_two_lists(l1, l2):\n    \"\"\"l1 and l2 are sorted Python lists representing linked lists.\n    TODO: return a new sorted list containing all elements.\n    \"\"\"\n    return []\n",
+      "java": "import java.util.*;\n\npublic class Solution {\n    public List<Integer> mergeTwoLists(List<Integer> l1, List<Integer> l2) {\n        // TODO: merge two sorted lists and return a sorted list\n        return new ArrayList<>();\n    }\n}\n",
+      "cpp": "#include <vector>\nusing namespace std;\n\nclass Solution {\npublic:\n    vector<int> mergeTwoLists(const vector<int>& l1, const vector<int>& l2) {\n        // TODO: merge two sorted vectors and return a sorted vector\n        return {};\n    }\n};\n"
+    }
+  },
+  {
+  "id": 4,
+  "title": "Best Time to Buy and Sell Stock",
+  "description": "Given daily stock prices, determine the maximum profit achievable by buying once and selling once. The optimal solution keeps track of the minimum price seen so far and the best profit at each step, giving an O(n) single-pass algorithm.",
+  "difficulty": "Easy",
+  "topics": ["Array", "Dynamic Programming"],
+  "tags": ["stocks", "dp", "array"],
+  "category": "Algorithms",
+  "acceptance": 52,
+  "completed": false,
+  "createdAt": "2024-03-01",
+  "publicTests": [
+    { "input": [[7, 1, 5, 3, 6, 4]], "expected": 5, "name": "Profit example" },
+    { "input": [[7, 6, 4, 3, 1]], "expected": 0, "name": "No profit" },
+    { "input": [[1, 2]], "expected": 1, "name": "Simple increase" }
+  ],
+  "solutionFunction": {
+    "javascript": "maxProfit",
+    "python": "max_profit",
+    "java": "maxProfit",
+    "cpp": "maxProfit"
+  },
+  "starterCode": {
+      "javascript": "function maxProfit(prices) {\n  // write code here\n  return 0;\n}",
+      "python": "def max_profit(prices):\n    # write code here\n    return 0",
+      "java": "class Solution {\n    public int maxProfit(int[] prices) {\n        // write code here\n        return 0;\n    }\n}",
+      "cpp": "#include <vector>\nusing namespace std;\nclass Solution {\npublic:\n    int maxProfit(vector<int>& prices) {\n        // write code here\n        return 0;\n    }\n};"
+    }
+},
+
+  {
+    "id": 5,
+    "title": "Binary Tree Level Order Traversal",
+    "description": "Return the values of a binary tree in level order (breadth-first traversal). Use a queue to visit nodes level by level, collecting node values per depth and outputting a nested list of levels.",
+    "difficulty": "Medium",
+    "topics": ["Tree", "BFS"],
+    "tags": ["tree", "bfs", "queue"],
+    "category": "Data Structures",
+    "acceptance": 64,
+    "completed": false,
+    "createdAt": "2024-03-20",
+    "publicTests": [
+      { "input": [[3, 9, 20, null, null, 15, 7]], "expected": [[3], [9, 20], [15, 7]], "name": "Balanced tree" },
+      { "input": [[]], "expected": [], "name": "Empty tree" },
+      { "input": [[1]], "expected": [[1]], "name": "Single node" }
+    ],
+    "solutionFunction": {
+      "javascript": "levelOrder",
+      "python": "level_order",
+      "java": "levelOrder",
+      "cpp": "levelOrder"
+    },
+    "starterCode": {
+      "javascript": "function levelOrder(treeArray) {\n  // treeArray is an array representation of a binary tree (level order with nulls)\n  // TODO: return a nested array of values per level\n}\n",
+      "python": "def level_order(tree_array):\n    \"\"\"tree_array is a list representing a binary tree in level order with None for nulls.\n    TODO: return a list of levels (each level is a list of node values).\n    \"\"\"\n    return []\n",
+      "java": "import java.util.*;\n\npublic class Solution {\n    public List<List<Integer>> levelOrder(List<Integer> treeArray) {\n        // TODO: interpret treeArray as binary tree and return level order traversal\n        return new ArrayList<>();\n    }\n}\n",
+      "cpp": "#include <vector>\nusing namespace std;\n\nclass Solution {\npublic:\n    vector<vector<int>> levelOrder(const vector<int>& treeArray) {\n        // TODO: interpret treeArray as binary tree and return level order traversal\n        return {};\n    }\n};\n"
+    }
+  },
+  {
+    "id": 6,
+    "title": "Coin Change",
+    "description": "Given coin denominations and an amount, compute the minimum number of coins required to make the amount, or return -1 if impossible. This is commonly solved with dynamic programming (bottom-up) using an array where dp[a] stores the fewest coins for amount a.",
+    "difficulty": "Medium",
+    "topics": ["Dynamic Programming"],
+    "tags": ["dp", "math", "minimum coins"],
+    "category": "Algorithms",
+    "acceptance": 38,
+    "completed": false,
+    "createdAt": "2024-04-10",
+    "publicTests": [
+      { "input": [[1, 2, 5], 11], "expected": 3, "name": "Classic example" },
+      { "input": [[2], 3], "expected": -1, "name": "Impossible" },
+      { "input": [[1], 0], "expected": 0, "name": "Zero amount" }
+    ],
+    "solutionFunction": {
+      "javascript": "coinChange",
+      "python": "coin_change",
+      "java": "coinChange",
+      "cpp": "coinChange"
+    },
+    "starterCode": {
+      "javascript": "function coinChange(coins, amount) {\n  // TODO: return the fewest number of coins needed to make up the amount, or -1\n}\n",
+      "python": "def coin_change(coins, amount):\n    \"\"\"TODO: return the fewest number of coins needed to make up the amount, or -1.\"\"\"\n    return -1\n",
+      "java": "public class Solution {\n    public int coinChange(int[] coins, int amount) {\n        // TODO: return the fewest number of coins needed to make up the amount, or -1\n        return -1;\n    }\n}\n",
+      "cpp": "#include <vector>\nusing namespace std;\n\nclass Solution {\npublic:\n    int coinChange(const vector<int>& coins, int amount) {\n        // TODO: return the fewest number of coins needed to make up the amount, or -1\n        return -1;\n    }\n};\n"
+    }
+  },
+  {
+    "id": 7,
+    "title": "Kth Largest Element in an Array",
+    "description": "Return the k-th largest element in an unsorted array. Approaches include using a min-heap of size k, quickselect (average O(n)), or sorting the array (O(n log n)). Choose based on performance trade-offs.",
+    "difficulty": "Medium",
+    "topics": ["Heap", "Sorting"],
+    "tags": ["heap", "priority queue", "kth element"],
+    "category": "Algorithms",
+    "acceptance": 58,
+    "completed": false,
+    "createdAt": "2024-04-22",
+    "publicTests": [
+      { "input": [[3, 2, 1, 5, 6, 4], 2], "expected": 5, "name": "k=2" },
+      { "input": [[3, 2, 3, 1, 2, 4, 5, 5, 6], 4], "expected": 4, "name": "duplicates" },
+      { "input": [[1], 1], "expected": 1, "name": "single element" }
+    ],
+    "solutionFunction": {
+      "javascript": "findKthLargest",
+      "python": "find_kth_largest",
+      "java": "findKthLargest",
+      "cpp": "findKthLargest"
+    },
+    "starterCode": {
+      "javascript": "function findKthLargest(nums, k) {\n  // TODO: return the k-th largest element in the array\n}\n",
+      "python": "def find_kth_largest(nums, k):\n    \"\"\"TODO: return the k-th largest element in the array.\"\"\"\n    return 0\n",
+      "java": "public class Solution {\n    public int findKthLargest(int[] nums, int k) {\n        // TODO: return the k-th largest element in the array\n        return 0;\n    }\n}\n",
+      "cpp": "#include <vector>\nusing namespace std;\n\nclass Solution {\npublic:\n    int findKthLargest(const vector<int>& nums, int k) {\n        // TODO: return the k-th largest element in the array\n        return 0;\n    }\n};\n"
+    }
+  },
+  {
+    "id": 8,
+    "title": "Longest Increasing Subsequence",
+    "description": "Find the length of the longest strictly increasing subsequence in an array. Solutions range from O(n^2) dynamic programming to an O(n log n) method using patience sorting / binary search over tails.",
+    "difficulty": "Medium",
+    "topics": ["Dynamic Programming", "Binary Search"],
+    "tags": ["dp", "lis", "binary search"],
+    "category": "Algorithms",
+    "acceptance": 41,
+    "completed": false,
+    "createdAt": "2024-05-02",
+    "publicTests": [
+      { "input": [[10, 9, 2, 5, 3, 7, 101, 18]], "expected": 4, "name": "example" },
+      { "input": [[0, 1, 0, 3, 2, 3]], "expected": 4, "name": "mixed" },
+      { "input": [[7, 7, 7, 7, 7, 7, 7]], "expected": 1, "name": "all equal" }
+    ],
+    "solutionFunction": {
+      "javascript": "lengthOfLIS",
+      "python": "length_of_lis",
+      "java": "lengthOfLIS",
+      "cpp": "lengthOfLIS"
+    },
+    "starterCode": {
+      "javascript": "function lengthOfLIS(nums) {\n  // TODO: return the length of the longest strictly increasing subsequence\n}\n",
+      "python": "def length_of_lis(nums):\n    \"\"\"TODO: return the length of the longest strictly increasing subsequence.\"\"\"\n    return 0\n",
+      "java": "public class Solution {\n    public int lengthOfLIS(int[] nums) {\n        // TODO: return the length of the longest strictly increasing subsequence\n        return 0;\n    }\n}\n",
+      "cpp": "#include <vector>\nusing namespace std;\n\nclass Solution {\npublic:\n    int lengthOfLIS(const vector<int>& nums) {\n        // TODO: return the length of the longest strictly increasing subsequence\n        return 0;\n    }\n};\n"
+    }
+  },
+  {
+    "id": 9,
+    "title": "Word Search",
+    "description": "Given a 2D board of characters and a word, determine if the word exists in the grid by sequentially adjacent cells (horizontally or vertically) without revisiting the same cell. This is typically solved with backtracking and marking visited cells during each search path.",
+    "difficulty": "Medium",
+    "topics": ["Backtracking", "Matrix"],
+    "tags": ["matrix", "backtracking", "dfs"],
+    "category": "Algorithms",
+    "acceptance": 37,
+    "completed": false,
+    "createdAt": "2024-05-18",
+    "publicTests": [
+      {
+        "input": [
+          [["A", "B", "C", "E"], ["S", "F", "C", "S"], ["A", "D", "E", "E"]],
+          "ABCCED"
+        ],
+        "expected": true,
+        "name": "found example"
+      },
+      {
+        "input": [
+          [["A", "B"], ["C", "D"]],
+          "ACDB"
+        ],
+        "expected": false,
+        "name": "not found"
+      },
+      {
+        "input": [
+          [["a"]],
+          "a"
+        ],
+        "expected": true,
+        "name": "single cell"
+      }
+    ],
+    "solutionFunction": {
+      "javascript": "exist",
+      "python": "exist",
+      "java": "exist",
+      "cpp": "exist"
+    },
+    "starterCode": {
+      "javascript": "function exist(board, word) {\n  // board is a 2D array of characters, word is a string\n  // TODO: return true if word exists in the board\n}\n",
+      "python": "def exist(board, word):\n    \"\"\"board is a 2D list of characters, word is a string.\n    TODO: return True if word exists in the board.\n    \"\"\"\n    return False\n",
+      "java": "public class Solution {\n    public boolean exist(char[][] board, String word) {\n        // TODO: return true if word exists in the board\n        return false;\n    }\n}\n",
+      "cpp": "#include <vector>\n#include <string>\nusing namespace std;\n\nclass Solution {\npublic:\n    bool exist(vector<vector<char>>& board, string word) {\n        // TODO: return true if word exists in the board\n        return false;\n    }\n};\n"
+    }
+  },
+  {
+    "id": 10,
+    "title": "Median of Two Sorted Arrays",
+    "description": "Find the median of two sorted arrays efficiently in logarithmic time by performing a binary search on the smaller array and partitioning both arrays until left/right halves satisfy median properties.",
+    "difficulty": "Hard",
+    "topics": ["Binary Search", "Array"],
+    "tags": ["binary search", "divide and conquer", "advanced"],
+    "category": "Algorithms",
+    "acceptance": 29,
+    "completed": false,
+    "createdAt": "2024-06-01",
+    "publicTests": [
+      { "input": [[1, 3], [2]], "expected": 2.0, "name": "odd total" },
+      { "input": [[1, 2], [3, 4]], "expected": 2.5, "name": "even total" },
+      { "input": [[0, 0], [0, 0]], "expected": 0.0, "name": "all zeros" }
+    ],
+    "solutionFunction": {
+      "javascript": "findMedianSortedArrays",
+      "python": "find_median_sorted_arrays",
+      "java": "findMedianSortedArrays",
+      "cpp": "findMedianSortedArrays"
+    },
+    "starterCode": {
+      "javascript": "function findMedianSortedArrays(nums1, nums2) {\n  // nums1 and nums2 are sorted arrays\n  // TODO: return the median of the two sorted arrays\n}\n",
+      "python": "def find_median_sorted_arrays(nums1, nums2):\n    \"\"\"nums1 and nums2 are sorted lists.\n    TODO: return the median of the two sorted arrays.\n    \"\"\"\n    return 0.0\n",
+      "java": "public class Solution {\n    public double findMedianSortedArrays(int[] nums1, int[] nums2) {\n        // TODO: return the median of the two sorted arrays\n        return 0.0;\n    }\n}\n",
+      "cpp": "#include <vector>\nusing namespace std;\n\nclass Solution {\npublic:\n    double findMedianSortedArrays(const vector<int>& nums1, const vector<int>& nums2) {\n        // TODO: return the median of the two sorted arrays\n        return 0.0;\n    }\n};\n"
+    }
+  },
+  {
+    "id": 11,
+    "title": "LRU Cache",
+    "description": "Design a data structure that supports get and put operations in O(1) time and evicts the least recently used item when capacity is exceeded. A common implementation uses a hash map for O(1) access and a doubly-linked list to track usage order.",
+    "difficulty": "Hard",
+    "topics": ["HashMap", "Doubly Linked List"],
+    "tags": ["cache", "design problem", "linked list"],
+    "category": "System Design",
+    "acceptance": 33,
+    "completed": false,
+    "createdAt": "2024-06-12",
+    "publicTests": [
+      {
+        "input": [
+          [2],
+          [["put", 1, 1], ["put", 2, 2], ["get", 1], ["put", 3, 3], ["get", 2], ["put", 4, 4], ["get", 1], ["get", 3], ["get", 4]]
+        ],
+        "expected": [null, null, 1, null, -1, null, -1, 3, 4],
+        "name": "sequence example"
+      },
+      {
+        "input": [[1], [["put", 1, 1], ["get", 1]]],
+        "expected": [null, 1],
+        "name": "simple put/get"
+      }
+    ],
+    "solutionFunction": {
+      "javascript": "lruProcess",
+      "python": "lru_process",
+      "java": "lruProcess",
+      "cpp": "lruProcess"
+    },
+    "starterCode": {
+      "javascript": "function lruProcess(capacity, operations) {\n  // capacity: integer\n  // operations: array like [ [\"put\", key, value], [\"get\", key], ... ]\n  // TODO: simulate an LRU cache and return the result of each operation\n  // For \"put\" return null, for \"get\" return the value or -1.\n}\n",
+      "python": "from collections import OrderedDict\n\n\ndef lru_process(capacity, operations):\n    \"\"\"capacity: int, operations: list of [\"put\", key, value] or [\"get\", key].\n    TODO: simulate an LRU cache and return list of results (None for put, value or -1 for get).\n    \"\"\"\n    results = []\n    # implement here\n    return results\n",
+      "java": "import java.util.*;\n\npublic class Solution {\n    public List<Integer> lruProcess(int capacity, List<List<String>> operations) {\n        // operations: each is [\"put\", key, value] or [\"get\", key]\n        // TODO: simulate an LRU cache and return list of results (null for put, value or -1 for get)\n        return new ArrayList<>();\n    }\n}\n",
+      "cpp": "#include <vector>\n#include <string>\n#include <list>\n#include <unordered_map>\nusing namespace std;\n\nclass Solution {\npublic:\n    vector<int> lruProcess(int capacity, const vector<vector<string>>& operations) {\n        // operations: [\"put\", key, value] or [\"get\", key]\n        // TODO: simulate an LRU cache and return results (-2 can be used for null if needed)\n        return {};\n    }\n};\n"
+    }
+  },
+  {
+    "id": 12,
+    "title": "Serialize and Deserialize Binary Tree",
+    "description": "Design algorithms to serialize a binary tree to a string and deserialize it back to the original structure. Solutions typically use BFS or DFS to encode node values and null markers so the tree shape can be reconstructed.",
+    "difficulty": "Hard",
+    "topics": ["Tree", "Design"],
+    "tags": ["tree", "serialization", "dfs", "bfs"],
+    "category": "Data Structures",
+    "acceptance": 40,
+    "completed": false,
+    "createdAt": "2024-06-30",
+    "publicTests": [
+      { "input": [[1, 2, 3, null, null, 4, 5]], "expected": [1, 2, 3, null, null, 4, 5], "name": "serialize roundtrip" },
+      { "input": [[]], "expected": [], "name": "empty tree" }
+    ],
+    "solutionFunction": {
+      "javascript": "serializeDeserialize",
+      "python": "serialize_deserialize",
+      "java": "serializeDeserialize",
+      "cpp": "serializeDeserialize"
+    },
+    "starterCode": {
+      "javascript": "function serializeDeserialize(treeArray) {\n  // treeArray: array representing a binary tree in level order with nulls\n  // TODO: serialize and then deserialize, and return the resulting array representation\n}\n",
+      "python": "def serialize_deserialize(tree_array):\n    \"\"\"tree_array: list representing a binary tree in level order with None for nulls.\n    TODO: serialize and then deserialize, and return the resulting representation.\n    \"\"\"\n    return []\n",
+      "java": "import java.util.*;\n\npublic class Solution {\n    public List<Integer> serializeDeserialize(List<Integer> treeArray) {\n        // TODO: serialize then deserialize and return resulting tree representation\n        return new ArrayList<>();\n    }\n}\n",
+      "cpp": "#include <vector>\nusing namespace std;\n\nclass Solution {\npublic:\n    vector<int> serializeDeserialize(const vector<int>& treeArray) {\n        // TODO: serialize then deserialize and return resulting tree representation\n        return {};\n    }\n};\n"
+    }
+  }
+]
